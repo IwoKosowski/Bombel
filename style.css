@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    object-fit: fill;
+
+}
+
+body::after {
+    background-image: url(tapet.jpg);
+    content: "";
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.imgnav {
+    margin-left: 1vw;
+    object-fit: cover;
+    width: 10vw;
+    height: 15vh;
+    justify-self: start;
+
+    max-width: 100%;
+    display: block;
+}
+
+header nav {
+    display: grid;
+    grid-template-columns: 4fr;
+    grid-template-rows: 1fr;
+
+
+
+    font-family: 'Ranchers', cursive;
+}
+
+nav ul {
+    margin-top: 1vh;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+nav ul li {
+    text-transform: uppercase;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    padding-top: 3vh;
+    width: 19vw;
+    letter-spacing: 1px;
+    transition: 0.3s ease-in-out;
+
+}
+
+ul li:nth-child(2n) {
+    background-color: #f1c5c5;
+}
+
+ul li:nth-child(2n+1) {
+    background-color: #8bcdcd;
+}
+
+ul li:nth-child(2n):hover {
+    background-color: #faf0af;
+}
+
+ul li:nth-child(2n+1):hover {
+    background-color: #faf0af;
+}
+
+
+.content {
+    display: grid;
+    grid-template-columns: 0.5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+
+.content section {
+    margin-top: 5vh;
+
+}
+
+.content ul {
+    list-style-type: none;
+    font-size: 30px;
+    position: relative;
+
+}
+
+
+
+
+.content span {
+    position: relative;
+    display: block;
+    height: 8vh;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 8vh;
+    font-family: 'Ranchers', cursive;
+}
+
+.TODO span {
+    background-color: #faf0af;
+}
+
+.Wizyty span {
+    background-color: #faf0af;
+}
+
+.Wyprawka span {
+    background-color: #faf0af;
+    ;
+}
+
+.Room span {
+    background-color: #faf0af;
+}
+
+
+.content ul li {
+    height: 7vh;
+    line-height: 7vh;
+    letter-spacing: 1px;
+    font-size: 25px;
+    display: block;
+    font-family: 'Open Sans Condensed', sans-serif;
+    border-bottom: 3px solid black;
+    transition: 0.3s ease-in-out;
+}
+
+.clock {
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 3vh;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: #e5edb7;
+    height: 10vh;
+    line-height: 80px;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 3vh auto 3vh auto;
+}
+
+button {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 25px;
+    text-align: right;
+    right: 0%;
+    height: 7vh;
+    width: 3.5vw;
+    font-family: 'Ranchers', cursive;
+    border: none;
+
+}
+
+
+
+
+button:focus,
+button:active {
+    outline: none;
+}
+
+span img {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.animate {
+
+    transform-style: preserve-3d;
+    transform-origin: 0 0;
+    transform: rotateX(-80deg);
+    animation: flip 1s ease-in-out forwards;
+}
+
+
+@keyframes flip {
+    100% {
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+.remove {
+
+    transform-style: preserve-3d;
+    transform-origin: 0 0;
+    transform: rotateX(0);
+    animation: flip2 1s ease-in-out forwards;
+}
+
+
+@keyframes flip2 {
+    100% {
+        transform: rotateX(-80deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width:1000px) {
+
+
+    nav ul li {
+        font-size: 15px;
+    }
+
+    .clock {
+        font-size: 20px;
+    }
+
+    .content ul li {
+        font-size: 15px;
+    }
+
+    .content span {
+        font-size: 15px;
+    }
+
+    span img {
+        content: url("add (1).png");
+    }
+}
+
+
+@media(max-width:360px) {
+
+
+    nav ul li {
+        font-size: 10px;
+    }
+
+    .clock {
+        font-size: 15px;
+    }
+
+    .content ul li {
+        font-size: 10px;
+    }
+
+    .content span {
+        font-size: 10px;
+    }
+
+    span img {
+        content: url("add (1).png");
+    }
+
+}
